@@ -57,4 +57,27 @@ profileImage.addEventListener("click", function () {
   }
 });
 
+const customerSupport = document.querySelector(".customer-support");
+const chatBox = document.querySelector(".chat-box");
+const minimizeButton = document.querySelector(".minimize-button");
+const maximizeButton = document.querySelector(".maximize-button");
+const closeButton = document.querySelector(".close-button");
+
+customerSupport.addEventListener("click", function() {
+  chatBox.style.display = "block";
+});
+
+minimizeButton.addEventListener("click", function() {
+  chatBox.style.display = "none";
+});
+
+maximizeButton.addEventListener("click", function() {
+  chatBox.style.display = "block";
+});
+
+closeButton.addEventListener("click", function() {
+  chatBox.style.display = "none";
+});
+
+
  
