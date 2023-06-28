@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 title="My name" class="header-title">Chekwube Elikwu</h1>
+        <p id="position" class="header-position">
+          Web Developer / Software Engineer
+        </p>
+      </header>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section id="summary" class="section">
+        <h2 class="section-heading">Summary</h2>
+        <div class="summary">
+          <div class="profile-image">
+            <img src="tuniee_pics.jpg" width="120px" alt="Chekwube Elikwu" />
+            <div class="tooltip">Click Image</div>
+          </div>
+          <p class="summary-text">
+            Deadline-oriented software engineer with lots of experience. Solid
+            track record of architecting solutions that exceed client
+            expectations.
+          </p>
+        </div>
+      </section>
+      <section id="experience" class="section">
+        <h2 class="section-heading">Experience</h2>
+        <ul class="experience-list">
+          <li><b>Software Engineer - Tuniee</b> | 2021 - Present</li>
+          <li><b>Fullstack Web Developer - Microverse</b> | 2022 - Present</li>
+          <li><b>Frontend Developer - ABC Company</b> | 2019 - 2021</li>
+        </ul>
+      </section>
+      <section id="skills" class="section">
+        <h2 class="section-heading">Skills</h2>
+        <table class="skills-table">
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>Professional</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Professional</td>
+          </tr>
+          <tr>
+            <td>JAVASCRIPT</td>
+            <td>Professional</td>
+          </tr>
+          <tr>
+            <td>PYTHON</td>
+            <td>Professional</td>
+          </tr>
+        </table>
+      </section>
+      <section id="contact" class="section">
+        <h2 class="section-heading">Contact</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input placeholder="Name" id="name" type="text" /><br />
+          <label for="email">Email:</label>
+          <input placeholder="Email" id="email" type="email" /><br />
+          <textarea placeholder="Message"></textarea><br />
+          <input type="submit" value="SEND" />
+        </form>
+      </section>
+      <footer>
+        <h2 class="section-heading">Contacts</h2>
+        <div id="social-links">
+          <a href="https://twitter.com/elicheant" target="_blank">
+            <img src="002-twitter-1.png" alt="Twitter" />
+          </a>
+          <a
+            href="https://github.com/tuniee?tab=overview&from=2023-05-01&to=2023-05-31"
+            target="_blank"
+          >
+            <img src="010-github-sign.png" alt="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/chekwube-anthony-elikwu-a99037141/"
+            target="_blank"
+          >
+            <img src="007-linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://web.facebook.com/2niee" target="_blank">
+            <img src="008-facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://whatsapp.com/+2347062566900" target="_blank">
+            <img src="005-whatsapp.png" alt="WhatsApp" />
+          </a>
+          <a href="https://telegram.com/+2347062566900" target="_blank">
+            <img src="009-telegram.png" alt="Telegram" />
+          </a>
+          <a href="mailto:tunieehandsome@gmail.com" target="_blank">
+            <img src="011-gmail.png" alt="Gmail" />
+          </a>
+        </div>
+        <p id="footer-text" class="footer-text">&copy; Chekwube Anthony</p>
+      </footer>
+    </div>
+    <div class="toggle-container">
+      <input type="checkbox" id="toggle-mode" />
+      <label for="toggle-mode" class="toggle-label">Toggle Mode</label>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

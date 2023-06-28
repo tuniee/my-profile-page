@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a2847;
+  background-image: url('laptop_background.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "summary"
+    "experience"
+    "skills"
+    "contact"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(30, 65, 95, 0.8);
+  transition: background-color 0.5s ease;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #f9ca24;
+}
+
+.section {
+  padding: 40px;
+  color: #fff;
+  background-color: rgba(26, 50, 74, 0.8);
+  transition: background-color 0.5s ease;
+}
+
+.section-heading {
+  font-size: 24px;
+  margin-top: 0;
+  color: #f9ca24;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.4s, filter 0.4s;
+}
+
+.profile-image .tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-image.open .tooltip {
+  opacity: 1;
+}
+
+.profile-image.open img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.profile-image.open .tooltip::after {
+  content: "Minimize Image";
+}
+
+.profile-image img:hover + .tooltip {
+  opacity: 1;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.skills-table th {
+  background-color: rgba(26, 50, 74, 0.8);
+  color: #f9ca24;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#contact-form textarea {
+  height: 150px;
+}
+
+#contact-form input[type="submit"] {
+  background-color: #f9ca24;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(30, 65, 95, 0.8);
+  transition: background-color 0.5s ease;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 5px;
+}
+
+#social-links a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.4s, filter 0.4s;
+}
+
+#social-links a img:hover {
+  transform: scale(1.2) rotate(360deg);
+  filter: brightness(1.2);
+}
+
+
+.toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.toggle-label::before {
+  content: "☀️";
+}
+
+.toggle-label::after {
+  content: "🌙";
+}
+
+#toggle-mode {
+  display: none;
+}
+
+#toggle-mode:checked + .toggle-label::before {
+  content: "🌙";
+}
+
+#toggle-mode:checked + .toggle-label::after {
+  content: "☀️";
+}
+
+.dark-mode {
+  background-color: #0e141f;
+  color: #fff;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode .section,
+.dark-mode footer {
+  background-color: rgba(14, 20, 31, 0.8);
+}
